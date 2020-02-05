@@ -8,7 +8,7 @@
         name: "syntax",
 		data() {
             return {
-                rawHtml: '<div id="vhtml">pham van oanh</div>'
+                rawHtml: '<div id="vhtml" style="color: red">pham van oanh</div>'
 			};
 		},
 		computed : {
