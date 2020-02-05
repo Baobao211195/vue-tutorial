@@ -1,7 +1,7 @@
 <template>
     <div id="example">
         <p>Original message: "{{ message }}"</p>
-        <p>Computed reversed message is cached: "{{ resever }}"</p>
+        <p>Computed reversed message is cached: "{{ reserver }}"</p>
         <p>Computed reversed message is not cached: "{{ now }}"</p>
     </div>
 </template>
@@ -17,7 +17,7 @@
         computed:{
 
             // this function is depended on message (reactive dependencies)
-            resever: function() {
+            reserver: function() {
                 return this.message.split('').reverse().join('')
             },
             // now does not depended on any reactive dependencies

@@ -3,18 +3,21 @@
         <img alt="Vue logo" src="./assets/logo.png">
         <demo1></demo1>
         <computed-properties></computed-properties>
+        <syntax></syntax>
     </div>
 </template>
 
 <script>
     import demo1 from './components/demo1.vue';
     import ComputedProperties from "@/components/ComputedProperties";
+    import syntax from "./components/syntax";
 
     export default {
         name: 'app',
         components: {
             demo1,
-            ComputedProperties
+            ComputedProperties,
+            syntax
         }
     }
 </script>
