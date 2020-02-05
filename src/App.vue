@@ -4,6 +4,7 @@
         <demo1></demo1>
         <computed-properties></computed-properties>
         <syntax></syntax>
+        <attribute></attribute>
     </div>
 </template>
 
@@ -11,13 +12,14 @@
     import demo1 from './components/demo1.vue';
     import ComputedProperties from "@/components/ComputedProperties";
     import syntax from "./components/syntax";
-
+    import attribute from "./components/attribute";
     export default {
         name: 'app',
         components: {
             demo1,
             ComputedProperties,
-            syntax
+            syntax,
+            attribute
         }
     }
 </script>
