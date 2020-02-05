@@ -5,6 +5,7 @@
         <computed-properties></computed-properties>
         <syntax></syntax>
         <attribute></attribute>
+        <UseExpression></UseExpression>
     </div>
 </template>
 
@@ -13,13 +14,15 @@
     import ComputedProperties from "@/components/ComputedProperties";
     import syntax from "./components/syntax";
     import attribute from "./components/attribute";
+    import UseExpression from "./components/UseExpression";
     export default {
         name: 'app',
         components: {
             demo1,
             ComputedProperties,
             syntax,
-            attribute
+            attribute,
+            UseExpression
         }
     }
 </script>
