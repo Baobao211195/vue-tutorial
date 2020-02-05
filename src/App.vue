@@ -6,6 +6,7 @@
         <syntax></syntax>
         <attribute></attribute>
         <UseExpression></UseExpression>
+        <binding-inline-style/>
     </div>
 </template>
 
@@ -15,6 +16,7 @@
     import syntax from "./components/syntax";
     import attribute from "./components/attribute";
     import UseExpression from "./components/UseExpression";
+    import BindingInlineStyle from "./components/BindingInlineStyle";
     export default {
         name: 'app',
         components: {
@@ -22,7 +24,8 @@
             ComputedProperties,
             syntax,
             attribute,
-            UseExpression
+            UseExpression,
+            BindingInlineStyle
         }
     }
 </script>
