@@ -26,6 +26,8 @@
 				{{item.message + item.name}}
 			</li>
 		</ul>
+
+		<!--use v-for vs <template>-->
 	</div>
 	
 </template>
@@ -58,10 +60,10 @@
 			}
 		},
 		computed : {
-            // changedItems: function () {
-			// 	const item = this.items.map(x => x.message + 'changed');
-			// 	return item;
-            // }
+            itemNames: function () {
+				const item = this.items.map(x => x.message + '-changed');
+				return item;
+            },
             changedItems: function () {
                 const oanh = this.items.map(item => {
                     return  Object.assign({}, item, {
