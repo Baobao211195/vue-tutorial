@@ -8,6 +8,7 @@
         <UseExpression></UseExpression>
         <binding-inline-style/>
         <ConditionalRendering></ConditionalRendering>
+        <list-rendering></list-rendering>
     </div>
 </template>
 
@@ -19,6 +20,7 @@
     import UseExpression from "./components/UseExpression";
     import BindingInlineStyle from "./components/BindingInlineStyle";
     import ConditionalRendering from "./components/ConditionalRendering";
+    import ListRendering from "./components/ListRendering";
     export default {
         name: 'app',
         components: {
@@ -28,7 +30,8 @@
             attribute,
             UseExpression,
             BindingInlineStyle,
-            ConditionalRendering
+            ConditionalRendering,
+            ListRendering
         }
     }
 </script>
