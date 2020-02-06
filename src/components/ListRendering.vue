@@ -1,5 +1,6 @@
 <template>
 	<div>
+		<!--have to use :key to  track each node’s identity-->
 		<ul>
 			<li v-for="item in items" :key="item">
 				{{item.message + item.name}}
@@ -9,6 +10,13 @@
 		<ul>
 			<li v-for="(item, index) in items" :key="item">
 				{{index + '-' + item.message + '-' + item.name}}
+			</li>
+		</ul>
+
+		<!--use v-for to object-->
+		<ul id="v-for-object" class="demo">
+			<li v-for="(value, name, index) in object" :key="value">
+				{{index + '-' + name + ':' + value}}
 			</li>
 		</ul>
 	</div>
@@ -33,7 +41,13 @@
                         message: 'message-3',
                         name: 'lam'
                     }
-				]
+				],
+				// use v-for vs object -> iterate properties in object
+                object: {
+                    title: 'How to do lists in Vue',
+                    author: 'Jane Doe',
+                    publishedAt: '2016-04-10'
+                }
 			}
 		}
     }
