@@ -1,17 +1,33 @@
 <template>
 	<div>
 		<div v-bind:class="{ active:isActive}">Object syntax</div>
-		<div class="static" v-bind:class="{ active: isActive, 'text-danger': hasError }">multiple properties</div>
+		<div class="static" v-bind:class="{ active: isActive, 'text-danger': hasError }">Use properties</div>
+		<div class="static" v-bind:class="classObject">Use Binding object</div>
+
+		<div class="static" v-bind:class="object">use computed property</div>
 	</div>
 </template>
 
 <script>
     export default {
         name: "BindingInlineStyle",
-		data () {
+		data() {
             return {
                 isActive: true,
-                hasError: true
+                hasError: true,
+                error: null,
+                classObject : { // use object
+                    active: true,
+                    'text-danger': true
+                }
+            }
+		},
+		computed: { // use computed property
+            object : function() {
+                return {
+                    active			: this.isActive && !this.error,
+                    'text-danger'	: this.error && this.error.type === 'fatal'
+				}
 			}
 		}
     }
@@ -20,7 +36,7 @@
 <style scoped>
 
 	.active {
-		font-size: 50px;
+		font-size: 20px;
 		color: greenyellow;
 	}
 	.text-danger {
