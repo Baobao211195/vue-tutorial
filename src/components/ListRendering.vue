@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<!--have to use :key to  track each node’s identity-->
+		<!--have to use :key to  track each node’s identity to maintaining state-->
 		<ul>
 			<li v-for="item in items" :key="item">
 				{{item.message + item.name}}
@@ -17,6 +17,13 @@
 		<ul id="v-for-object" class="demo">
 			<li v-for="(value, name, index) in object" :key="value">
 				{{index + '-' + name + ':' + value}}
+			</li>
+		</ul>
+
+		<!---->
+		<ul>
+			<li v-for="item in changedItems" :key="item">
+				{{item.message + item.name}}
 			</li>
 		</ul>
 	</div>
@@ -49,8 +56,24 @@
                     publishedAt: '2016-04-10'
                 }
 			}
+		},
+		computed : {
+            // changedItems: function () {
+			// 	const item = this.items.map(x => x.message + 'changed');
+			// 	return item;
+            // }
+            changedItems: function () {
+                const oanh = this.items.map(item => {
+                    return  Object.assign({}, item, {
+                        name : item.name + '-haha'
+					});
+                });
+                return oanh;
+            }
 		}
+
     }
+
 </script>
 
 <style scoped>
