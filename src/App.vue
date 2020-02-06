@@ -7,6 +7,7 @@
         <attribute></attribute>
         <UseExpression></UseExpression>
         <binding-inline-style/>
+        <ConditionalRendering></ConditionalRendering>
     </div>
 </template>
 
@@ -17,6 +18,7 @@
     import attribute from "./components/attribute";
     import UseExpression from "./components/UseExpression";
     import BindingInlineStyle from "./components/BindingInlineStyle";
+    import ConditionalRendering from "./components/ConditionalRendering";
     export default {
         name: 'app',
         components: {
@@ -25,7 +27,8 @@
             syntax,
             attribute,
             UseExpression,
-            BindingInlineStyle
+            BindingInlineStyle,
+            ConditionalRendering
         }
     }
 </script>
