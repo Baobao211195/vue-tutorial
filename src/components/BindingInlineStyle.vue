@@ -5,6 +5,9 @@
 		<div class="static" v-bind:class="classObject">Use Binding object</div>
 
 		<div class="static" v-bind:class="object">use computed property</div>
+
+		<p>Use array syntax</p>
+		<div :class="[isCheck ? activeClass : '', errorClass]">There are two properties in array</div>
 	</div>
 </template>
 
@@ -19,7 +22,11 @@
                 classObject : { // use object
                     active: true,
                     'text-danger': true
-                }
+                },
+
+				isCheck: false,
+				activeClass: 'active',
+				errorClass: 'text-danger'
             }
 		},
 		computed: { // use computed property
