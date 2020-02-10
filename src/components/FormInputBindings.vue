@@ -36,6 +36,8 @@
 		</div>
 		<div id="example-5">
 			<input type="checkbox" v-model="isChecked" true-value="yes" false-value="no">
+			<!--use .lazy-->
+			<input v-model.lazy="msg">
 
 
 		</div>
@@ -57,7 +59,8 @@
                 picked: '',
                 toggle: false,
 				toggle1: 0,
-                isChecked: 'no'
+                isChecked: 'no',
+                msg: 'pham van oanh'
 
 
 			}
