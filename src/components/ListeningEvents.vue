@@ -11,6 +11,12 @@
 
 			<p key="input-key2">The button above has been {{counter}} time.</p>
 		</div>
+
+		<div id="exmple-3">
+			<input type="text" v-model="name">
+			<button v-on:click="displayName(name)">display name</button>
+
+		</div>
 	</div>
 </template>
 
@@ -20,13 +26,18 @@
 		data() {
             return {
                 counter : 0,
-                counter1 : 1
+                counter1 : 1,
+				name: ''
 			}
 		},
 		
 		methods: {
             add: function () {
 				this.counter ++;
+            },
+			displayName: function (name) {
+                alert(name);
+				this.name =  name;
             }
 		}
     }
