@@ -7,7 +7,7 @@
         <attribute></attribute>
         <UseExpression></UseExpression>
         <binding-inline-style/>
-        <ConditionalRendering></ConditionalRendering>
+        <conditional-rendering></conditional-rendering>
         <list-rendering></list-rendering>
         <listening-events></listening-events>
         <form-input-bindings></form-input-bindings>
