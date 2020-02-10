@@ -7,7 +7,7 @@
         name: "demo1",
         data() {
             return {
-                msg: 'Hello'
+                msg: 'Pham van oanh'
 
             }
         },

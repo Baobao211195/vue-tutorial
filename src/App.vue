@@ -11,6 +11,8 @@
         <list-rendering></list-rendering>
         <listening-events></listening-events>
         <form-input-bindings></form-input-bindings>
+        <component-basic :title="msg1" :object="object">Pass tile from app</component-basic>
+
     </div>
 </template>
 
@@ -25,6 +27,7 @@
     import ListRendering from "./components/ListRendering";
     import ListeningEvents from "./components/ListeningEvents";
     import FormInputBindings from "./components/FormInputBindings";
+    import ComponentBasic from "./components/ComponentBasic";
     export default {
         name: 'app',
         components: {
@@ -37,8 +40,19 @@
             ConditionalRendering,
             ListRendering,
             ListeningEvents,
-            FormInputBindings
+            FormInputBindings,
+            ComponentBasic,
+        },
+        data() {
+            return {
+                msg1: 'hahhahahhahhahhahahhah', // pass variable
+                object: { // pass an object
+                    name: 'oanh',
+                    age: 23
+                }
+            }
         }
+
     }
 </script>
 
