@@ -42,6 +42,7 @@
 		methods: {
             changeSelected : function (selected) {
 				alert("You are selecting : " + selected);
+				this.selected = selected;
             }
 		}
 
