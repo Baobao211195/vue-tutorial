@@ -22,6 +22,23 @@
 			</select>
 
 		</div>
+		<pre>
+			+ Use value binding v-bind
+			+ Use v-bind -> know value non string
+		</pre>
+		<div id="value-binding">
+			Radio : <input type="radio" v-model="picked" value="a">
+			Checkbox : <input type="checkbox" v-model="toggle">
+			<br>
+			Radio-v-bind : <input type="radio" v-model="picked" v-bind:value="6">
+			Checkbox-v-bind : <input type="checkbox" v-model="toggle1"  v-bind:value="23">
+
+		</div>
+		<div id="example-5">
+			<input type="checkbox" v-model="isChecked" true-value="yes" false-value="no">
+
+
+		</div>
 	</div>
 </template>
 
@@ -36,7 +53,13 @@
 
                 selected: '',
 				// for checkbox
-				check: false
+				check: false,
+                picked: '',
+                toggle: false,
+				toggle1: 0,
+                isChecked: 'no'
+
+
 			}
 		},
 		methods: {
