@@ -10,6 +10,7 @@
         <ConditionalRendering></ConditionalRendering>
         <list-rendering></list-rendering>
         <listening-events></listening-events>
+        <form-input-bindings></form-input-bindings>
     </div>
 </template>
 
@@ -23,6 +24,7 @@
     import ConditionalRendering from "./components/ConditionalRendering";
     import ListRendering from "./components/ListRendering";
     import ListeningEvents from "./components/ListeningEvents";
+    import FormInputBindings from "./components/FormInputBindings";
     export default {
         name: 'app',
         components: {
@@ -34,7 +36,8 @@
             BindingInlineStyle,
             ConditionalRendering,
             ListRendering,
-            ListeningEvents
+            ListeningEvents,
+            FormInputBindings
         }
     }
 </script>
