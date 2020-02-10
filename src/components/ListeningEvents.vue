@@ -17,6 +17,10 @@
 			<button v-on:click="displayName(name)">display name</button>
 
 		</div>
+
+		<div id="exmple-4"> use  Enter
+			<input type="text" v-model="name" v-on:keyup.enter="useKeyEnter(name)">
+		</div>
 	</div>
 </template>
 
@@ -38,6 +42,10 @@
 			displayName: function (name) {
                 alert(name);
 				this.name =  name;
+            },
+
+            useKeyEnter: function (name) {
+                alert("you have just use enter key : " + name);
             }
 		}
     }
