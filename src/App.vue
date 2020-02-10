@@ -11,7 +11,14 @@
         <list-rendering></list-rendering>
         <listening-events></listening-events>
         <form-input-bindings></form-input-bindings>
-        <component-basic :title="msg1" :object="object">Pass tile from app</component-basic>
+        <component-basic :title="msg1" :object="object" :arrs="arrs">Pass tile from app</component-basic>
+        <pass-array-use-props
+            v-for="post in arrs"
+            v-bind:key="post.id"
+            v-bind:id="post.id"
+            v-bind:name="post.name"
+        ></pass-array-use-props>
+
 
     </div>
 </template>
@@ -28,6 +35,7 @@
     import ListeningEvents from "./components/ListeningEvents";
     import FormInputBindings from "./components/FormInputBindings";
     import ComponentBasic from "./components/ComponentBasic";
+    import PassArrayUseProps from "./components/PassArrayUseProps";
     export default {
         name: 'app',
         components: {
@@ -42,6 +50,7 @@
             ListeningEvents,
             FormInputBindings,
             ComponentBasic,
+            PassArrayUseProps
         },
         data() {
             return {
@@ -49,7 +58,12 @@
                 object: { // pass an object
                     name: 'oanh',
                     age: 23
-                }
+                },
+                arrs : [
+                    {id : 1, name: 'pham van oanh'},
+                    {id : 2, name: 'van oanh'},
+                    {id : 3, name: 'Nguyen van'}
+                ]
             }
         }
 
