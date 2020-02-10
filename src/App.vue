@@ -9,6 +9,7 @@
         <binding-inline-style/>
         <ConditionalRendering></ConditionalRendering>
         <list-rendering></list-rendering>
+        <listening-events></listening-events>
     </div>
 </template>
 
@@ -21,6 +22,7 @@
     import BindingInlineStyle from "./components/BindingInlineStyle";
     import ConditionalRendering from "./components/ConditionalRendering";
     import ListRendering from "./components/ListRendering";
+    import ListeningEvents from "./components/ListeningEvents";
     export default {
         name: 'app',
         components: {
@@ -31,7 +33,8 @@
             UseExpression,
             BindingInlineStyle,
             ConditionalRendering,
-            ListRendering
+            ListRendering,
+            ListeningEvents
         }
     }
 </script>
