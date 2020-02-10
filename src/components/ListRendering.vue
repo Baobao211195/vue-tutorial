@@ -15,7 +15,7 @@
 
 		<!--use v-for to object-->
 		<ul id="v-for-object" class="demo">
-			<li v-for="(value, name, index) in object" :key="value">
+			<li v-for="(value, name, index) in obj" :key="value">
 				{{index + '-' + name + ':' + value}}
 			</li>
 		</ul>
@@ -52,7 +52,7 @@
                     }
 				],
 				// use v-for vs object -> iterate properties in object
-                object: {
+                obj: {
                     title: 'How to do lists in Vue',
                     author: 'Jane Doe',
                     publishedAt: '2016-04-10'

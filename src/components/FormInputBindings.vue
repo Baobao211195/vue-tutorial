@@ -15,7 +15,7 @@
 
 		<div id="select-id">
 			<select name="" id="" v-model="selected" v-on:change="changeSelected(selected)">
-				<option disabled value="">Please select one</option>
+				<option   value="">Please select one</option>
 				<option>A</option>
 				<option>B</option>
 				<option>C</option>
