@@ -18,6 +18,9 @@
             :post="post"
             v-on:click-id="onClickFromChild">
         </pass-array-use-props>
+        <custom-input v-model="searchText">
+        </custom-input>
+
     </div>
 </template>
 
@@ -34,6 +37,7 @@
     import FormInputBindings from "./components/FormInputBindings";
     import ComponentBasic from "./components/ComponentBasic";
     import PassArrayUseProps from "./components/PassArrayUseProps";
+    import CustomInput from "./components/CustomInput";
     export default {
         name: 'app',
         components: {
@@ -48,7 +52,8 @@
             ListeningEvents,
             FormInputBindings,
             ComponentBasic,
-            PassArrayUseProps
+            PassArrayUseProps,
+            CustomInput
         },
         data() {
             return {
