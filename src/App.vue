@@ -66,8 +66,8 @@
             
         },
         methods: {
-            onClickFromChild: id => {
-                alert(id + "has clicked !");
+            onClickFromChild: object => {
+                alert(object.id + ' ' + object.name  + " has been selected !");
             }
         }
 
