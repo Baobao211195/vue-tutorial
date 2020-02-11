@@ -20,6 +20,7 @@
         </pass-array-use-props>
         <custom-input v-model="searchText">
         </custom-input>
+        <dynamic-component></dynamic-component>
 
     </div>
 </template>
@@ -38,6 +39,7 @@
     import ComponentBasic from "./components/ComponentBasic";
     import PassArrayUseProps from "./components/PassArrayUseProps";
     import CustomInput from "./components/CustomInput";
+    import DynamicComponent from "./components/DynamicComponent";
     export default {
         name: 'app',
         components: {
@@ -53,7 +55,8 @@
             FormInputBindings,
             ComponentBasic,
             PassArrayUseProps,
-            CustomInput
+            CustomInput,
+            DynamicComponent
         },
         data() {
             return {
