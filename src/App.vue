@@ -15,7 +15,8 @@
         <pass-array-use-props
             v-for="post in arrs"
             v-bind:key="post.id"
-            :post="post">
+            :post="post"
+            v-on:click-id="onClickFromChild">
         </pass-array-use-props>
     </div>
 </template>
@@ -61,6 +62,12 @@
                     {id : 2, name: 'van oanh'},
                     {id : 3, name: 'Nguyen van'}
                 ]
+            }
+            
+        },
+        methods: {
+            onClickFromChild: id => {
+                alert(id + "has clicked !");
             }
         }
 
