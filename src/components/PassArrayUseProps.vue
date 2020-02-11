@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<ul>
-			<li>{{id}} from {{name}}</li>
+			<li>{{post.id}} from {{post.name}}</li>
 		</ul>
 	</div>
 </template>
@@ -10,8 +10,10 @@
     export default {
         name: "PassArrayUseProps",
 		props: {
-            id: Number,
-			name: String
+            post : {
+                type: Object,
+				default : () => {}
+			}
         }
 
     }
