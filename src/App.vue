@@ -14,7 +14,7 @@
         <component-basic :title="msg1" :object="object" :arrs="arrs">Pass tile from app</component-basic>
         <pass-array-use-props
             v-for="post in arrs"
-            v-bind:key="post"
+            v-bind:key="post.id"
             :post="post">
         </pass-array-use-props>
     </div>
