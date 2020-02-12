@@ -17,11 +17,10 @@
             :post="post"
             v-on:click-id="onClickFromChild">
         </pass-array-use-props>
-        <custom-input v-model="searchText">
-        </custom-input>
+<!--        <custom-input v-model="searchText"></custom-input>-->
         <dynamic-component></dynamic-component>
-        <props :obj="object" :initialCounter="counter"></props>
-
+        <props :object="object" :initialCounter="counter"></props>
+        <prop-validation :objValidate="vObj"></prop-validation>
     </div>
 </template>
 
@@ -37,9 +36,10 @@
     import FormInputBindings from "./components/FormInputBindings";
     import ComponentBasic from "./components/ComponentBasic";
     import PassArrayUseProps from "./components/PassArrayUseProps";
-    import CustomInput from "./components/CustomInput";
+    // import CustomInput from "./components/CustomInput";
     import DynamicComponent from "./components/DynamicComponent";
     import Props from "./components/Props";
+    import PropValidation from "./components/PropValidation";
     export default {
         name: 'app',
         components: {
@@ -54,9 +54,10 @@
             FormInputBindings,
             ComponentBasic,
             PassArrayUseProps,
-            CustomInput,
+            // CustomInput,
             DynamicComponent,
-            Props
+            Props,
+            PropValidation
         },
         data() {
             return {
@@ -70,7 +71,12 @@
                     {id : 2, name: 'van oanh'},
                     {id : 3, name: 'Nguyen van'}
                 ],
-                counter : 0
+                counter : 0,
+                vObj : {
+                    name: 'oanh',
+                    age: 29
+                }
+
             }
             
         },
