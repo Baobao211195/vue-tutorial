@@ -1,7 +1,6 @@
 <template>
     <div id="app">
         <img alt="Vue logo" src="./assets/logo.png">
-        <demo1></demo1>
         <computed-properties></computed-properties>
         <syntax></syntax>
         <attribute></attribute>
