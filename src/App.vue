@@ -20,12 +20,12 @@
         <custom-input v-model="searchText">
         </custom-input>
         <dynamic-component></dynamic-component>
+        <props :obj="object" :initialCounter="counter"></props>
 
     </div>
 </template>
 
 <script>
-    import demo1 from './components/demo1.vue';
     import ComputedProperties from "@/components/ComputedProperties";
     import syntax from "./components/syntax";
     import attribute from "./components/attribute";
@@ -39,10 +39,10 @@
     import PassArrayUseProps from "./components/PassArrayUseProps";
     import CustomInput from "./components/CustomInput";
     import DynamicComponent from "./components/DynamicComponent";
+    import Props from "./components/Props";
     export default {
         name: 'app',
         components: {
-            demo1,
             ComputedProperties,
             syntax,
             attribute,
@@ -55,7 +55,8 @@
             ComponentBasic,
             PassArrayUseProps,
             CustomInput,
-            DynamicComponent
+            DynamicComponent,
+            Props
         },
         data() {
             return {
@@ -68,7 +69,8 @@
                     {id : 1, name: 'pham van oanh'},
                     {id : 2, name: 'van oanh'},
                     {id : 3, name: 'Nguyen van'}
-                ]
+                ],
+                counter : 0
             }
             
         },
