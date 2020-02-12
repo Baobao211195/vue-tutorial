@@ -24,8 +24,8 @@
 		],
         data: function () {
             return {
-                counter: this.initialCounter, // Case 1
-                object : () => {}  // re-assign for another variable
+                counter: this.initialCounter, 	// Case 1
+                object : () => {}  				// re-assign for another variable
             }
 
         },
