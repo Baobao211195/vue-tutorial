@@ -21,6 +21,7 @@
         <dynamic-component></dynamic-component>
         <props :object="object" :initialCounter="counter"></props>
         <prop-validation :objValidate="vObj"></prop-validation>
+		<custom-v-model v-model="customVModel"></custom-v-model>
     </div>
 </template>
 
@@ -40,6 +41,7 @@
     import DynamicComponent from "./components/DynamicComponent";
     import Props from "./components/Props";
     import PropValidation from "./components/PropValidation";
+    import CustomVModel from "./components/CustomEvents";
     export default {
         name: 'app',
         components: {
@@ -57,7 +59,9 @@
             // CustomInput,
             DynamicComponent,
             Props,
-            PropValidation
+            PropValidation,
+            CustomVModel
+
         },
         data() {
             return {
@@ -75,7 +79,8 @@
                 vObj : {
                     name: 'oanh',
                     age: 29
-                }
+                },
+                customVModel: true
 
             }
             
