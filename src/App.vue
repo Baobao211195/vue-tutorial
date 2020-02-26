@@ -22,6 +22,10 @@
         <props :object="object" :initialCounter="counter"></props>
         <prop-validation :objValidate="vObj"></prop-validation>
 		<custom-v-model v-model="customVModel"></custom-v-model>
+		<keep-alive-dynamic-components>
+
+
+		</keep-alive-dynamic-components>
     </div>
 </template>
 
@@ -42,6 +46,7 @@
     import Props from "./components/Props";
     import PropValidation from "./components/PropValidation";
     import CustomVModel from "./components/CustomEvents";
+    import KeepAliveDynamicComponents from "./components/KeepAliveDynamicComponents";
     export default {
         name: 'app',
         components: {
@@ -60,7 +65,8 @@
             DynamicComponent,
             Props,
             PropValidation,
-            CustomVModel
+            CustomVModel,
+            KeepAliveDynamicComponents
 
         },
         data() {
@@ -103,4 +109,6 @@
         color: #2c3e50;
         margin-top: 60px;
     }
+
+
 </style>
