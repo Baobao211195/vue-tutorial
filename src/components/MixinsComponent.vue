@@ -41,7 +41,8 @@
         // },
         methods: {
             hello: function () {
-                console.log('Hello from component!') //  sẽ được ưu tiên khi có cùng method trong mixins
+                console.log('Hello from component!') //  sẽ được ưu tiên khi có cùng key trong 1 object trong mixins and
+				// áp dụng cho cả components và directives
             }
         }
     }
