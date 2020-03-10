@@ -7,7 +7,7 @@
         <UseExpression></UseExpression>
         <binding-inline-style/>
         <conditional-rendering></conditional-rendering>
-        <list-rendering></list-rendering>
+<!--        <list-rendering></list-rendering>-->
         <listening-events></listening-events>
         <form-input-bindings></form-input-bindings>
         <component-basic :title="msg1" :object="object" :arrs="arrs">Pass tile from app</component-basic>
@@ -19,13 +19,12 @@
         </pass-array-use-props>
 <!--        <custom-input v-model="searchText"></custom-input>-->
         <dynamic-component></dynamic-component>
-        <props :object="object" :initialCounter="counter"></props>
+<!--        <props :object="object" :initialCounter="counter"></props>-->
         <prop-validation :objValidate="vObj"></prop-validation>
 		<custom-v-model v-model="customVModel"></custom-v-model>
 		<keep-alive-dynamic-components>
-
-
 		</keep-alive-dynamic-components>
+        <MixinsComponent></MixinsComponent>
     </div>
 </template>
 
@@ -36,17 +35,18 @@
     import UseExpression from "./components/UseExpression";
     import BindingInlineStyle from "./components/BindingInlineStyle";
     import ConditionalRendering from "./components/ConditionalRendering";
-    import ListRendering from "./components/ListRendering";
+    // import ListRendering from "./components/ListRendering";
     import ListeningEvents from "./components/ListeningEvents";
     import FormInputBindings from "./components/FormInputBindings";
     import ComponentBasic from "./components/ComponentBasic";
     import PassArrayUseProps from "./components/PassArrayUseProps";
     // import CustomInput from "./components/CustomInput";
     import DynamicComponent from "./components/DynamicComponent";
-    import Props from "./components/Props";
+    // import Props from "./components/Props";
     import PropValidation from "./components/PropValidation";
     import CustomVModel from "./components/CustomEvents";
     import KeepAliveDynamicComponents from "./components/KeepAliveDynamicComponents";
+    import MixinsComponent from "./components/MixinsComponent";
     export default {
         name: 'app',
         components: {
@@ -56,18 +56,18 @@
             UseExpression,
             BindingInlineStyle,
             ConditionalRendering,
-            ListRendering,
+            // ListRendering,
             ListeningEvents,
             FormInputBindings,
             ComponentBasic,
             PassArrayUseProps,
             // CustomInput,
             DynamicComponent,
-            Props,
+            // Props,
             PropValidation,
             CustomVModel,
-            KeepAliveDynamicComponents
-
+            KeepAliveDynamicComponents,
+            MixinsComponent,
         },
         data() {
             return {
