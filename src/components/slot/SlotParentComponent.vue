@@ -15,22 +15,34 @@
 
 		<!--nếu ở parent ko inject bất kỳ content nào vào child'slot thì
 		child sẽ render bất kỳ tag nào trong <slot></slot>-->
+
+		<!--Name of slot-------------------------------------->
+
+		<named-slot-component>
+			<template  slot="top-bun">This is a template vs name of slot is top-bun {{topBun}}</template >
+			<br>
+			<template  slot="bottom-bun">This is a template vs name of slot is bottom-bun {{bottonBun}}</template >
+		</named-slot-component>
 	</div>
 
 </template>
 
 <script>
     import SlotChildComponent from "./SlotChildComponent";
+    import NamedSlotComponent from "./NamedSlotComponent";
 
     export default {
         name: "SlotParentComponent",
-        components: {SlotChildComponent},
+        components: {NamedSlotComponent, SlotChildComponent},
         comments: {
-            SlotChildComponent
+            SlotChildComponent,
+            NamedSlotComponent
         },
 		data() {
             return {
-                myVariable: 'data from parent component'
+                myVariable: 'data from parent component',
+				topBun: "This is top bun",
+                bottonBun: "This is bottom bun",
 			}
 		}
     }
