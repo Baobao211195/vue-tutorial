@@ -25,6 +25,7 @@
 		<keep-alive-dynamic-components>
 		</keep-alive-dynamic-components>
         <MixinsComponent></MixinsComponent>
+        <slot-parent-component></slot-parent-component>
     </div>
 </template>
 
@@ -47,6 +48,7 @@
     import CustomVModel from "./components/CustomEvents";
     import KeepAliveDynamicComponents from "./components/KeepAliveDynamicComponents";
     import MixinsComponent from "./components/MixinsComponent";
+    import SlotParentComponent from "./components/slot/SlotParentComponent";
     export default {
         name: 'app',
         components: {
@@ -68,6 +70,7 @@
             CustomVModel,
             KeepAliveDynamicComponents,
             MixinsComponent,
+            SlotParentComponent
         },
         data() {
             return {
