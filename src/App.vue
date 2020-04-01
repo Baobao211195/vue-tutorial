@@ -26,6 +26,7 @@
 		</keep-alive-dynamic-components>
         <MixinsComponent></MixinsComponent>
         <slot-parent-component></slot-parent-component>
+        <demo-directive-component></demo-directive-component>
     </div>
 </template>
 
@@ -49,6 +50,7 @@
     import KeepAliveDynamicComponents from "./components/KeepAliveDynamicComponents";
     import MixinsComponent from "./components/MixinsComponent";
     import SlotParentComponent from "./components/slot/SlotParentComponent";
+    import DemoDirectiveComponent from "./components/directive/DemoDirectiveComponent";
     export default {
         name: 'app',
         components: {
@@ -70,7 +72,8 @@
             CustomVModel,
             KeepAliveDynamicComponents,
             MixinsComponent,
-            SlotParentComponent
+            SlotParentComponent,
+            DemoDirectiveComponent
         },
         data() {
             return {
