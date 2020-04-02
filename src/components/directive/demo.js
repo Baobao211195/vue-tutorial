@@ -19,7 +19,7 @@ export const demoDirective = {
          * + value: giá trị truyền và directives
          * + oldValue: giá trị trước đó (chỉ những biến trong hai hàm update và componentUpdated)
          * + expression: nó giống như 1 inline function dưới dạng string.
-         * + arg: tham số truyền vào directive (eg: v-my-directive:name) -> arg là name
+         * + arg: tham số truyền vào directive (eg: v-my-directive:name) -> arg là name ; arg có thể là dynamic để truyền từ ngoài vào v-mydirective:[argument]="value"
          * + modifiers: là một object (eg: v-my-directive.foo.bar => { foo: true, bar: true },
          * v-my-directive:oanh.foo.bar => oanh: { foo: true, bar: true })
          */
