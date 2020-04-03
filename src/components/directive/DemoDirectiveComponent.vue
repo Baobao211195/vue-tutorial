@@ -20,7 +20,7 @@
                 name: "pham van oanh ",
                 direction: {
                     color:"red",
-					size: "500px"
+					size: "40px"
 				}
             }
         }
