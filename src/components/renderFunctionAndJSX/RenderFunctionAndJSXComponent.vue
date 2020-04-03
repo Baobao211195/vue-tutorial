@@ -9,21 +9,38 @@
 	    *   </div>
 	    * </template>
 	    */
-		render(createElement) {
+        render(createElement) {
+            // <div data-v-1d86e23e="" class="myClass customerClass" style="background-color: black;">
             return createElement('div',
                 {
-                    'class': this.isRed
+                    'class': {
+                        'myClass': this.isRed,
+						'customerClass': this.isRed
+                    },
+					'style' : {
+                        backgroundColor: 'black'
+					}
                 },
                 [
-                    createElement('p', 'Example Text')
+                    createElement('p', 'Example Text'),
+                    createElement('ul', this.pod.map(obj => createElement('li', obj.name)))
                 ]
             ) // syntax createElement(renderElement: String | Component, definition: Object, children: String | Array)
         },
-
         data() {
             return {
-                isRed: true
-				
+                isRed: true,
+                pod: [
+                    {
+                        name: 'oanh'
+                    },
+                    {
+                        name: 'van'
+                    },
+                    {
+                        name: 'kem'
+                    }
+                ]
             }
         }
     }
