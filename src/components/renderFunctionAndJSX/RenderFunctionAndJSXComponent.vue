@@ -53,7 +53,7 @@
                     // of it for you.
                     directives: [
                         {
-                            name: 'my-custom-directive',
+                            //name: 'my-custom-directive',
                             value: '2',
                             expression: '1 + 1',
                             arg: 'foo',
