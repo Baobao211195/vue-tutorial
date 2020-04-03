@@ -27,6 +27,7 @@
         <MixinsComponent></MixinsComponent>
         <slot-parent-component></slot-parent-component>
         <demo-directive-component></demo-directive-component>
+        <render-function-and-j-s-x-component></render-function-and-j-s-x-component>
     </div>
 </template>
 
@@ -51,6 +52,7 @@
     import MixinsComponent from "./components/MixinsComponent";
     import SlotParentComponent from "./components/slot/SlotParentComponent";
     import DemoDirectiveComponent from "./components/directive/DemoDirectiveComponent";
+    import RenderFunctionAndJSXComponent from "./components/renderFunctionAndJSX/RenderFunctionAndJSXComponent";
     export default {
         name: 'app',
         components: {
@@ -73,7 +75,8 @@
             KeepAliveDynamicComponents,
             MixinsComponent,
             SlotParentComponent,
-            DemoDirectiveComponent
+            DemoDirectiveComponent,
+            RenderFunctionAndJSXComponent
         },
         data() {
             return {
