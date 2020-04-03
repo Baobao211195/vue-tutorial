@@ -39,15 +39,15 @@
                     // modifiers such as in `v-on:keyup.enter` are not
                     // supported. You'll have to manually check the
                     // keyCode in the handler instead.
-                    on: {
-                        click: this.clickHandler
-                    },
+                    // on: {
+                    //     click: this.clickHandler
+                    // },
                     // For components only. Allows you to listen to
                     // native events, rather than events emitted from
                     // the component using `vm.$emit`.
-                    nativeOn: {
-                        click: this.nativeClickHandler
-                    },
+                    // nativeOn: {
+                    //     click: this.nativeClickHandler
+                    // },
                     // Custom directives. Note that the `binding`'s
                     // `oldValue` cannot be set, as Vue keeps track
                     // of it for you.
@@ -88,9 +88,9 @@
         data() {
             return {
                 isRed: true,
-                clickHandler: function() {
-                    console.log("click handler")
-				},
+                // clickHandler: function() {
+                //     console.log("click handler")
+				// },
                 pod: [
                     {
                         name: 'oanh'

@@ -28,6 +28,7 @@
         <slot-parent-component></slot-parent-component>
         <demo-directive-component></demo-directive-component>
         <render-function-and-j-s-x-component></render-function-and-j-s-x-component>
+		<render-function-example :items="pod"></render-function-example>
     </div>
 </template>
 
@@ -53,6 +54,7 @@
     import SlotParentComponent from "./components/slot/SlotParentComponent";
     import DemoDirectiveComponent from "./components/directive/DemoDirectiveComponent";
     import RenderFunctionAndJSXComponent from "./components/renderFunctionAndJSX/RenderFunctionAndJSXComponent";
+    import RenderFunctionExample from "./components/renderFunctionAndJSX/RenderFunctionExample";
     export default {
         name: 'app',
         components: {
@@ -76,7 +78,8 @@
             MixinsComponent,
             SlotParentComponent,
             DemoDirectiveComponent,
-            RenderFunctionAndJSXComponent
+            RenderFunctionAndJSXComponent,
+            RenderFunctionExample
         },
         data() {
             return {
@@ -95,7 +98,18 @@
                     name: 'oanh',
                     age: 29
                 },
-                customVModel: true
+                customVModel: true,
+                pod: [
+                    {
+                        name: 'oanh'
+                    },
+                    {
+                        name: 'van'
+                    },
+                    {
+                        name: 'kem'
+                    }
+                ]
 
             }
             
