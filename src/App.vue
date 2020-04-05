@@ -29,6 +29,8 @@
         <demo-directive-component></demo-directive-component>
         <render-function-and-j-s-x-component></render-function-and-j-s-x-component>
 		<render-function-example :items="pod"></render-function-example>
+        <filter-demo-component></filter-demo-component>
+
     </div>
 </template>
 
@@ -55,6 +57,7 @@
     import DemoDirectiveComponent from "./components/directive/DemoDirectiveComponent";
     import RenderFunctionAndJSXComponent from "./components/renderFunctionAndJSX/RenderFunctionAndJSXComponent";
     import RenderFunctionExample from "./components/renderFunctionAndJSX/RenderFunctionExample";
+    import FilterDemoComponent from "./components/Filter/FilterDemoComponent";
     export default {
         name: 'app',
         components: {
@@ -79,7 +82,8 @@
             SlotParentComponent,
             DemoDirectiveComponent,
             RenderFunctionAndJSXComponent,
-            RenderFunctionExample
+            RenderFunctionExample,
+            FilterDemoComponent
         },
         data() {
             return {
@@ -109,7 +113,8 @@
                     {
                         name: 'kem'
                     }
-                ]
+                ],
+                message: "render function implement slot"
 
             }
             
