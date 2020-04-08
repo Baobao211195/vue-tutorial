@@ -30,6 +30,16 @@
         <render-function-and-j-s-x-component></render-function-and-j-s-x-component>
 		<render-function-example :items="pod"></render-function-example>
         <filter-demo-component></filter-demo-component>
+        <router-view></router-view>
+<!--        <router-demo-component></router-demo-component>-->
+
+<!--        <router-link to="/routerDemoComponent">Go</router-link>-->
+        <nav>
+            <router-link to='/'>Home</router-link>
+            <router-link to='/routerDemoComponent'>GO</router-link>
+<!--            <router-link to='/login'>Login</router-link>-->
+        </nav>
+
 
     </div>
 </template>
@@ -58,6 +68,7 @@
     import RenderFunctionAndJSXComponent from "./components/renderFunctionAndJSX/RenderFunctionAndJSXComponent";
     import RenderFunctionExample from "./components/renderFunctionAndJSX/RenderFunctionExample";
     import FilterDemoComponent from "./components/Filter/FilterDemoComponent";
+    // import RouterDemoComponent from "./components/RouterDemoComponent";
     export default {
         name: 'app',
         components: {
@@ -83,7 +94,8 @@
             DemoDirectiveComponent,
             RenderFunctionAndJSXComponent,
             RenderFunctionExample,
-            FilterDemoComponent
+            FilterDemoComponent,
+            // RouterDemoComponent
         },
         data() {
             return {
